@@ -19,7 +19,7 @@ export default function Login( { navigation }) {
                 <EntradaTexto label="email" placeholder="Insira seu endereço de email" />
                 <EntradaTexto label="senha" placeholder="Insira sua senha de acesso" />
             </Box>
-            <Botao>Entrar</Botao>
+            <Botao onPress={()=> navigation.navigate('Tabs')}>Entrar</Botao>
             <Link href='http://www.fatectq.edu.br' marginTop={10}> Esqueceu a senha? </Link>
             <Box w="100%" flexDirection="row" justifyContent="center" mt={10}>
                 <Text> Ainda não tem cadastro? </Text>
