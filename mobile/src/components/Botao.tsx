@@ -8,7 +8,7 @@ interface ButtonProps extends ITextProps {
 
 export function Botao({ children, ...rest }: ButtonProps) {
     return (
-        <Button background={"blue.800"} w="100%" marginTop={10}
+        <Button background={"blue.800"} w="100%" marginTop={4}
          borderRadius="lg" {...rest}>
             {children}
         </Button>
