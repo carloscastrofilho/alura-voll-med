@@ -3,7 +3,7 @@ import { Botao } from './Botao'
 
 interface CardProps {
     nome: string;
-    foto: string ;
+    foto?: string ;
     especialidade : string ;
     data?: string;
     foiAtendido?: boolean ;
@@ -13,7 +13,8 @@ interface CardProps {
 export function CardConsulta({ nome,foto,data, 
     especialidade, foiAgendado, foiAtendido }:CardProps){
     return (
-        <VStack mt="4" w="100%" bg={ foiAtendido ? 'blue.100':"green.400" } p="5" borderRadius="lg" shadow={1} >
+        <VStack mb="5" w="100%" bg={ foiAtendido ? 'blue.100':"green.400" } 
+            p="5" borderRadius="lg" shadow={1} >
             <VStack flexDirection="row">
             <Avatar size="lg" source={{uri:foto}}/>
             <VStack pl="4">
@@ -23,7 +24,7 @@ export function CardConsulta({ nome,foto,data,
             </VStack>
             </VStack>
             <Botao mt={4}> 
-                {foiAgendado ? 'Cancelar Consulta' : 'Agendar Consulta' } 
+                {foiAgendado ? 'Cancelar' : 'Agendar Consulta' } 
              </Botao>
         </VStack>
     )
