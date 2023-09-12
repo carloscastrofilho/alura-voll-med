@@ -1,8 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons' ;
 
-import Principal from "../Principal"; 
+import Principal from "./Principal"; 
 import Consultas from "./Consultas";
+import Perfil from './Perfil';
+import Explorar from './Explorar';
 
 const Tab = createBottomTabNavigator() ;
 const screnOptions = {
@@ -23,11 +25,11 @@ const tabs = [
         icon: 'calendar'
     },
     { name: "Explorar",
-        component: Consultas,
+        component: Explorar,
         icon: 'search'
     },
     { name: "Perfil",
-        component: Consultas,
+        component: Perfil,
         icon: 'person'
     },
 ]
@@ -40,7 +42,7 @@ export default function Tabs(){
                     key={tab.name}
                     name={tab.name}
                     component={tab.component} 
-                    options={{headerShow: false,
+                    options={{ headerShown: false,
                     tabBarIcon:({color, size})=> (
                         <Ionicons name={tab.icon}  color={color} size={size} />)
                 }}/>
